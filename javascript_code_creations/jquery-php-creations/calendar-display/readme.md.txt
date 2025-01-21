@@ -1,0 +1,1 @@
+Intended functionality was to have a calendar, where you could add activities to certain dates. Then those would be stored in a MySQL data base, then php would call the database each time you reloaded the site, so you would be able to see your activities on the applicable days. Also would have a login, so multiple users could login and have their activities.

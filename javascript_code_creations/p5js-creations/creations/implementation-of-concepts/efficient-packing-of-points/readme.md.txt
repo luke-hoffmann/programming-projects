@@ -1,0 +1,1 @@
+This code will display random non-overlapping circles on the canvas, where each circle’s position is chosen randomly, but each new circle must be far enough from existing circles. It visually demonstrates the packing problem, where objects (the circles) are placed in a fixed area without overlapping.

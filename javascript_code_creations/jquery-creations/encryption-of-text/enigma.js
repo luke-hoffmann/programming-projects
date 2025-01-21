@@ -1,0 +1,8 @@
+function pseudoEnigmaEncrypt(current,string) {
+
+
+
+    
+
+
+}

@@ -1,0 +1,234 @@
+input[type=range] {
+  background:none;
+  -webkit-appearance: none;
+}
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 5px;
+  border: -1px rgb(184, 184, 184) solid;
+  background-color:rgb(184, 184, 184);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color:#FF7F7F;
+  border-radius:5px;
+  height: 20px;
+  width: 10px;
+  border: 1px #FF7F7F;
+
+
+}
+
+input[type=range]::-moz-range-track {
+  border-radius: 5px;
+  border: 3px rgb(184, 184, 184) solid;
+  background-color:rgb(184, 184, 184);
+}
+body {
+  background-color: rgb(235, 235, 235);
+  position: relative;
+}
+
+/*👉#controls > hr {
+
+}👈*/
+
+.satCont {
+  display: inline-block;
+  border: 5px solid black;
+  width:60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+#controls >button{
+  font-family: 'Berrette';
+  border-radius: 2px;
+  border: 1px solid black;
+  background-color:rgb(211, 211, 211);
+  display: block;
+  width:150px;
+  height:45px;
+  font-size:18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.satCont > button {
+  margin:5px;
+  font-family: 'Berrette';
+  border-radius: 2px;
+  border: 1px solid black;
+  background-color:rgb(211, 211, 211);
+  display: block;
+  width: 50px;
+  height:45px;
+  font-size:15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#toggler {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  margin-bottom: -45px;
+  
+}
+
+#game {
+  font-family: 'Berrette';
+  visibility: hidden;
+  position: relative;
+  right:0;
+  
+  
+  z-index: 1;
+  display: inline-block;
+}
+
+#controls {
+  border: 10px solid black;
+  pointer-events: none;
+  width:200px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+#controls > {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#returnHome {
+  bottom: 20;
+  float:left;
+  text-align: center;
+  pointer-events: auto;
+  z-index: 8;
+}
+h3 {
+  font-family: 'Berrette';
+  margin:0;
+  margin-top:5px;
+  font-family: 10px;
+}
+
+h2{
+  margin:5px;
+}
+#popUpper {
+  opacity: 1;
+  position:absolute;
+  /*👉background:red;👈*/
+  width:1000px;
+  height:1000px;
+  outline: dotted;
+  background:rgb(214, 214, 214);
+  margin-left: 0px;
+  /*👉margin-top: -280px;👈*/
+  /*👉transform: translate(10px 100px);👈*/
+  pointer-events: auto;
+  z-index: 6;
+  display:block;
+}
+
+#okayPop {
+  
+  opacity: 1;
+  /*👉top:700px;👈*/
+  margin: 0;
+
+  font-size: 20px;
+  margin-left: 20px;
+  position: absolute;
+  background:#6ce981;
+  pointer-events: auto;
+  width: 100px;
+}
+
+#info {
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 20px;
+}
+
+#small {
+  font-size:10px;
+  display: inline
+}
+
+ul {
+  margin-top:-2px;
+  padding:10;
+}
+
+.boxBox {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
+  border: 6.5px solid rgb(0, 0, 0);
+  
+}
+ul {
+  margin:0;
+}
+.boxBox > button {
+  margin:5px;
+  font-family: 'Berrette';
+  border-radius: 2px;
+  border: 1px solid black;
+  background-color:rgb(211, 211, 211);
+  display: block;
+  width: 150px;
+  height:45px;
+  font-size:10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-family: 'Berrette';
+  margin:1px;
+  font-size:20px;
+
+}
+
+h1 {
+  text-align: center;
+  margin:5px;
+  font-size: 20px;
+  font-family: 'Berrette';
+}
+b {
+  margin:1px;
+  font-size: 100%;
+}
+
+.buttonsER {
+  margin: 1px;
+  text-align: center;
+  font-size:15px;
+}
+
+.buttonsERT {
+  margin: 1px;
+  text-align: center;
+  font-size:13px;
+}
+.buttonsERTE {
+  margin: 1px;
+  text-align: center;
+  font-size:11px;
+}
+.slider {
+  margin-bottom: 10px;
+}
+.slider1 {
+  margin-bottom: 5px;
+}

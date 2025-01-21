@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>2 bodies with gravity</title>
+	<link href="2body.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+	<div id="controls">
+    <h1>Control Panel</h1>
+
+    <div class="boxBox">
+    <h2>SIMULATION</h2>
+    <button type="button" id="onOff" onclick="onOff()"><h class="buttonsER"><b>START/STOP <br> SIMULATION</b></h> </button>
+    <button type="button" onclick="resetSim()"> <h class="buttonsER"><b>RESET SIMULATION</b></h> </button> 
+    
+  </div>
+  <div class="boxBox">
+    <h2>PLANET</h2>
+		 <button type="button" id="contSun" onclick="controlSun()"> <h class="buttonsER"><b>RELOCATE <br>THE PLANET</b></h> </button> 
+     <button id="lockSun"type="button" onclick="lockSun()"> <h class="buttonsERT"><b>LOCK/UNLOCK <br> PLANET LOCATION</b></h> </button>
+     <h3>MASS</h3><input type="range" min="1" max="300" value="180" class="slider1" id="sunMass"> <br> 
+    <h3>VELOCITY</h3> <input type="range" id="sunVel" min="0" max="5" value="0" class="slider">
+    
+    
+    
+    </div>
+    <div class="boxBox">
+    <h2>COMET</h2>
+    
+     <button type="button" id="contComet" onclick="controlComet()"> <h class="buttonsER"><b>RELOCATE <br>THE COMET</b></h></button> 
+     <h3>MASS</h3><input type="range" min="1" max="70" value="8" class="slider1" id="cometMass"> <br>
+     <h3>VELOCITY</h3><input type="range" id="cometVel" min="0" max="5" value="0" class="slider">    
+    </div>
+    
+    
+    
+
+    <div class="boxBox">
+      <h2>SATELLITE ORBIT HEIGHT</h2>
+      <div class="satCont">
+        
+    <button type="button" id="stationUP" onclick="stationUp()"><h class="buttonsERTE"><b>UP</b></h> </button>  
+    <h class="buttonsER"><b>SAT1</b></h>
+    <button type="button" id="stationDOWN" onclick="stationDown()"> <h class="buttonsERTE"><b>DOWN</b></h> </button>
+  </div>
+
+    <div class="satCont">
+      <!-- ↑ ↓ -->
+    <button type="button" id="stationUP" onclick="stationUp2()"> <h class="buttonsERTE"><b>UP</b></h> </button>
+    <h class="buttonsER"><b>SAT2</b></h>
+    <button type="button" id="stationDOWN" onclick="stationDown2()"> <h class="buttonsERTE"><b>DOWN</b></h> </button>
+  </div>
+    
+  </div>
+  </div>
+    <!--<button id="toggler" onclick="sliderUP()"> ^ </button> -->
+    
+    
+    
+
+
+    
+  </head>
+  <body>
+    
+    <div id="popUpper" > 
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="info">
+      <h2><u>Gravity Simulation</u></h2>
+      <br>
+
+      
+
+
+This is an interactive gravity simulation showing its effects on interstellar bodies. <br>
+
+The main formula used is F<h1 id="small">grav</h1> = G×M<h1 id="small">1</h1>×M<h1 id="small">2</h1>/r<sup>2</sup>. <br>
+
+
+<br>
+
+<u><h2>How do you control it?</h2></u> <br>
+
+
+<b>Pause Button</b> - allows you to pause and unpause the simulation. <br>
+
+<b>Control Planet & Control Commet</b> -
+allows you to control the
+direction of movement and location 
+<ul>
+  <li>drag body to reposistion</li>
+  <li>click to set direction</li>
+</ul>
+
+
+<b>Reset Simulation</b> - Resets the bodies to original posistion and velocity. <br>
+
+<b>Pause Planet Movement</b> - Lock the planetary body in place so that it is not effected by the comet. <br>
+
+<b>Planet Mass & Comet Mass</b> - Allows you to change the mass of the comet and planet. <br>
+
+<b>Planet Velocity & Comet Velocity</b> - Allows you to change the velocity in a given direction based on where you clicked
+for the comet and planet. </p>
+<button type="button" id="okayPop" onclick="popUp()"> <b>BEGIN HERE</b> </button>
+</div>
+
+
+
+    </div>
+    <h1 id="returnHome"><a href="../index.html">Home</a></h1>
+    <div id="game">
+      
+      <button id="toggler" onclick="sliderUP()"> ^ </button>
+      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <div id="p5game">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+
+    <script src="spacestation.js"></script>
+    <script src="stars.js"></script>
+    <script src="mass.js"></script>
+    <script src="2bodyScript.js"></script>
+    </div>
+    </div>
+    
+  </body>
+</html>

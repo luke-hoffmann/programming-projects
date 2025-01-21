@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="encryptDiv">
+        <h2 style="margin-top: 5px; margin-bottom: 0px;">Ascii <--> Binary</h2>
+        <hr>
+        
+        <div class="encryptSmall">
+            <div style="width:100%; height:25px;">Ascii -> Binary</div>
+            <div id="smallThing">
+                
+                Input
+    <textarea  type="input"id="inputCool" placeholder="Enter any words you want to be turned into binary bytes"></textarea> 
+    </div> 
+    
+            <div style="width:30px;height:100px; display: inline-block;"></div>
+            <div id="smallThing">
+                Output
+
+    <textarea type="input" id="output"></textarea>
+
+                
+    </div>  
+    
+    </div>
+    <button type="button" id="submit"> Submit</button>
+    <hr>
+
+    <!-- decrypt -->
+
+    
+        <div class="encryptSmall">
+            <div style="width:100%; height:25px;">Binary -> Ascii</div>
+            <div id="smallThing">
+                Input
+    <textarea type="input"id="inputBinary" placeholder="Enter any binary bytes you want to be turned into words"></textarea> 
+    </div> 
+    
+            <div style="width:30px;height:100px; display: inline-block;"></div>
+            <div id="smallThing">
+                Output
+
+    <textarea type="input"id="outputBinary"></textarea>
+
+
+    </div>  
+    
+    </div>
+    <button type="button" id="submitDecrypt"> Submit</button>
+
+
+
+
+
+
+
+    <!------ decrypt-->
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- caesar cipher-->
+
+<div id="encryptDiv">
+    <h2 style="margin-top: 5px; margin-bottom: 0px;">Caesar Cipher</h2>
+    <hr>
+    
+    <div class="encryptSmall">
+        <div style="width:100%; height:25px;"> Words -> Shifted Words</div>
+        
+        <div id="smallThing">
+            
+            Input
+<textarea  type="input"id="inputCoolCaesar" placeholder="Enter any words you want to be shifted using Caesar Cipher"></textarea> 
+</div> 
+
+        <div style="width:30px;height:100px; display: inline-block;"><input type="input" id="encryptAmount" style="width:25px;"  placeholder="num"></div>
+        <div id="smallThing">
+            Output
+
+<textarea type="input" id="outputCaesarEncrypt"></textarea>
+
+            
+</div>  
+
+</div>
+<button type="button" id="submitCaesar"> Submit</button>
+<hr>
+
+<!-- decrypt -->
+
+
+    <div class="encryptSmall">
+        <div style="width:100%; height:25px;">Shifted Words -> Words</div>
+        <div id="smallThing">
+            Input
+<textarea type="input"id="decryptCaesar" placeholder="Enter any shifted text you want to be unshifted"></textarea> 
+</div> 
+
+        <div style="width:30px;height:100px; display: inline-block;"><input type="input" id="decryptAmount" style="width:25px;"  placeholder="num"></div>
+        <div id="smallThing">
+            Output
+
+<textarea type="input"id="outputDecrypt"></textarea>
+
+
+</div>  
+
+</div>
+<button type="button" id="submitDecryptCaesar"> Submit</button>
+
+
+
+
+
+
+
+<!------ decrypt-->
+
+</div>
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="enigma.js"></script>
+    <script src="caesarCipher.js"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
