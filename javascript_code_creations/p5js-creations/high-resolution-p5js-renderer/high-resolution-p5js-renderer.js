@@ -12,13 +12,17 @@ function setup(){
 
 function draw() {
     image(renderGraphic, 0, 0);
+    renderGraphic.background(255);
     renderGraphic.scale(sF);
+    renderGraphic.push();
     // do stuff here
+
+    renderGraphic.pop();
 }
 
 function exportHighRes() {
     // HighRes Export
-    sF = scaleFactor
+    sF = renderWidth/viewWidth;
     renderGraphic = createGraphics(renderWidth, renderHeight);
     renderGraphic.background(255);
     draw();
@@ -29,7 +33,7 @@ function exportHighRes() {
     sF=1;
     
     renderGraphic = createGraphics(viewWidth, viewHeight);
-    renderGraphic.background(100);
+    renderGraphic.background(255);
     draw();
 }
 
