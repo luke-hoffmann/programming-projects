@@ -365,8 +365,8 @@ let grid = [];
 
 
 
-let renderWidth = 4000;
-let renderHeight = 4000;
+let renderWidth = 500;
+let renderHeight = 500;
 let renderGraphic;
 let viewWidth = 400;
 let viewHeight = 400;
@@ -499,7 +499,7 @@ function exportHighRes() {
     renderGraphic.background(255);
     draw();
     
-    save(renderGraphic, "convex-hull-test-export", 'png');
+    save(renderGraphic, "boids-with-rgb-render", 'png');
     
     // Reset Default
     sF=1;

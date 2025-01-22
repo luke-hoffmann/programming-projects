@@ -82,8 +82,8 @@ function ConvexHull(graph){
 
 
 
-let renderWidth = 2000;
-let renderHeight = 2000;
+let renderWidth = 500;
+let renderHeight = 500;
 let renderGraphic;
 let viewWidth = 400;
 let viewHeight = 400;
@@ -111,12 +111,22 @@ function setup(){
     }
     hull = ConvexHull(points);
 }
-
+function strokeOrFillRGB(array,filler){
+  
+    if (filler == "fill") {
+      renderGraphic.fill(array[0],array[1],array[2]);
+    }
+    if (filler == "stroke") {
+      renderGraphic.stroke(array[0],array[1],array[2]);
+    }
+}
+  
 function draw() {
     image(renderGraphic, 0, 0);
     renderGraphic.scale(sF);
     // do stuff here
     for (let i =0;  i < points.length;i++) {
+        strokeOrFillRGB([points[i][0]/(width),150,points[i][0]/(width/255)],"fill")
         renderGraphic.circle(points[i][0],points[i][1],15);
     }
     if (graphConvexHull) {
@@ -133,7 +143,7 @@ function exportHighRes() {
     renderGraphic.background(255);
     draw();
     
-    save(renderGraphic, "convex-hull-test-export", 'png');
+    save(renderGraphic, "convex-hull-2D-render", 'png');
     
     // Reset Default
     sF=1;

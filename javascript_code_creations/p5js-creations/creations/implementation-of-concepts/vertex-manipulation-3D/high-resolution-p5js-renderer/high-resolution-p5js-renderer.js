@@ -4,11 +4,11 @@ let planes = undefined;
 let redPoints = [];
 
 1350,600
-let renderWidth = 2000;
-let renderHeight = 2000;
+let renderWidth = 5000;
+let renderHeight = 5000;
 let renderGraphic;
-let viewWidth = 700;
-let viewHeight = 700;
+let viewWidth = 400;
+let viewHeight = 400;
 let sF = 1;
 function setup(){
     createCanvas(viewWidth,viewHeight);

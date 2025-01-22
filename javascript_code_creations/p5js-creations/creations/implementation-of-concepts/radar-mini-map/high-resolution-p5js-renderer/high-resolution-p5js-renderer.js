@@ -3,7 +3,21 @@ let worldZoom = 1;
 const radiansToDegrees = 180/Math.PI;
 
 let worldSize = {x:900,y:900};
+function scalePositionToRGB(x,y,w,h){
+  return [x/(w)*255,80,y/(h)*255];
+}
 
+
+
+function strokeOrFillRGB(array,filler){
+  
+  if (filler == "fill") {
+    renderGraphic.fill(array[0],array[1],array[2]);
+  }
+  if (filler == "stroke") {
+    renderGraphic.stroke(array[0],array[1],array[2]);
+  }
+}
 
 function badAngleToGoodAngle(x1,y1,x2,y2) {
   this.x1 = x1;
@@ -37,8 +51,10 @@ class obstacle{
    
   }
   draw(playerPos){
-    renderGraphic.stroke("black");
+    
+    
     this.difference = p5.Vector.sub(this.position,playerPos);
+    strokeOrFillRGB(scalePositionToRGB(this.position.x,this.position.y,worldSize.x,worldSize.y),"fill");
 this.display = p5.Vector.add(this.difference, playerPos.position)//add(createVector(200,200))
     //console.log(this.display)
     //circle(this.display.x,this.display.y,10);
@@ -88,16 +104,11 @@ class character{
   }
 
   draw(){
-    renderGraphic.noFill()
-    renderGraphic.stroke("red")
-    //circle(200,200,radarDistance*2*worldZoom)
-    //text(this.position.x,100,20);
-    //text(this.position.y,100,40);
     this.radarIntervalToDistance = this.radarRadius/this.radarInterval*this.realWorldRingWidth;
     this.everyRingPropIs = this.radarIntervalToDistance/this.radarRadius/this.radarInterval
     this.viewDistance = (this.radarIntervalToDistance);
     renderGraphic.noFill();
-    renderGraphic.stroke("red");
+    renderGraphic.stroke(0);
     renderGraphic.circle(200,200,30*worldZoom)
 
     this.acceleration = createVector();
@@ -132,7 +143,7 @@ class character{
 
   radar(obstaclesIn) {
     renderGraphic.noStroke();
-    renderGraphic.fill("#aaaaaa")
+    renderGraphic.fill("white")
     renderGraphic.circle(50,50,(this.radarRadius*2) + this.radarBlipSize);
     for (let i=1 ; i <= this.radarRadius/this.radarInterval;i++) {
       renderGraphic.stroke(0);
@@ -149,8 +160,8 @@ class character{
       this.radarDisplay.push(this.radarBlip.limit(this.radarRadius));
     }
     for (let i =0; i < this.radarDisplay.length; i++) {
-      renderGraphic.fill("red");
-      renderGraphic.noStroke()
+      renderGraphic.noStroke();
+      renderGraphic.fill("red")
       renderGraphic.circle(this.radarDisplay[i].x + this.radarLoc.x, this.radarDisplay[i].y + this.radarLoc.y, this.radarBlipSize);
     }
   }
@@ -178,12 +189,8 @@ let grid = [];
 
 
 
-
-
-
-
-let renderWidth = 4000;
-let renderHeight = 4000;
+let renderWidth = 500;
+let renderHeight = 500;
 let renderGraphic;
 let viewWidth = 400;
 let viewHeight = 400;
