@@ -1,9 +1,25 @@
-let renderWidth = 4000;
-let renderHeight = 4000;
+let renderWidth = 500;
+let renderHeight = 500;
 let renderGraphic;
 let viewWidth = 400;
 let viewHeight = 400;
 let sF = 1;
+
+function scalePositionToRGB(x,y,w,h){
+    return [x/(w)*255,80,y/(h)*255];
+  }
+  
+  
+  
+  function strokeOrFillRGB(array,filler){
+    
+    if (filler == "fill") {
+      renderGraphic.fill(array[0],array[1],array[2]);
+    }
+    if (filler == "stroke") {
+      renderGraphic.stroke(array[0],array[1],array[2]);
+    }
+  }
 function setup(){
     createCanvas(viewWidth,viewHeight);
     renderGraphic = createGraphics(viewWidth, viewHeight);

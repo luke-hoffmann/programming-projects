@@ -1,12 +1,13 @@
+let sideLength= 100;
 let points = [
   [0,0,0],
-  [0,0,60],
-  [60,0,0],
-  [60,60,0],
-  [60,0,60],
-  [0,60,60],
-  [0,60,0],
-  [60,60,60],
+  [0,0,sideLength],
+  [sideLength,0,0],
+  [sideLength,sideLength,0],
+  [sideLength,0,sideLength],
+  [0,sideLength,sideLength],
+  [0,sideLength,0],
+  [sideLength,sideLength,sideLength],
 ]
 let colors = [
   "red", "green", "blue", "yellow", "white", "purple", "orange", "pink"
@@ -94,7 +95,6 @@ function draw() {
   
   clear();
   background(0);
-  //circle(60,60,30)
   rotationX = [
   [1,0,0],
   [0,Math.cos(theta),-Math.sin(theta)],
@@ -124,8 +124,8 @@ function draw() {
     b = matrixMult(b,rotationX)
     b = matrixMult(b,rotationY)
     b = matrixMult(b,rotationZ)
-    b[0][0] = b[0][0]  + Math.cos(circleTheta) * 100
-    b[0][1] = b[0][1]  + Math.sin(circleTheta) * 100
+    b[0][0] = b[0][0]
+    b[0][1] = b[0][1]
     //console.log(b)
     newArray.push(b);
   }
